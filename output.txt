@@ -1,32 +1,32 @@
-2024-09-10T00:32:09.448498800,File SampleData.csv has loaded successfully.
-2024-09-10T00:32:09.475491500,Data Completeness check passed. ID column  has no missing value for row 1
-2024-09-10T00:32:09.478490500,Data Completeness check passed. Name column  has no missing value for row 1
-2024-09-10T00:32:09.478490500,Data Completeness check passed. Date column  has no missing value for row 1
-2024-09-10T00:32:09.478490500,Data Completeness check passed. Amount column  has no missing value for row 1
-2024-09-10T00:32:09.478490500,Data Completeness check passed. ID column  has no missing value for row 2
-2024-09-10T00:32:09.478490500,Data Completeness check passed. Name column  has no missing value for row 2
-2024-09-10T00:32:09.478490500,Data Completeness check passed. Date column  has no missing value for row 2
-2024-09-10T00:32:09.478490500,Data Completeness check passed. Amount column  has no missing value for row 2
-2024-09-10T00:32:09.479490300,Data Completeness check passed. ID column  has no missing value for row 3
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Name column  has no missing value for row 3
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Date column  has no missing value for row 3
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Amount column  has no missing value for row 3
-2024-09-10T00:32:09.479490300,Data Completeness check passed. ID column  has no missing value for row 4
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Name column  has no missing value for row 4
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Date column  has no missing value for row 4
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Amount column  has no missing value for row 4
-2024-09-10T00:32:09.479490300,Data Completeness check passed. ID column  has no missing value for row 5
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Name column  has no missing value for row 5
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Date column  has no missing value for row 5
-2024-09-10T00:32:09.479490300,Data Completeness check passed. Amount column  has no missing value for row 5
-2024-09-10T00:32:09.479490300,Data Completeness check passed. ID column  has no missing value for row 6
-2024-09-10T00:32:09.479490300,Data Completeness check failed. Name column  has missing value for row 6
-2024-09-10T00:32:09.480491300,Data Completeness check passed. Date column  has no missing value for row 6
-2024-09-10T00:32:09.480491300,Data Completeness check failed. Amount column  has missing value for row 6
-2024-09-10T00:32:09.491491,Data Consistency check failed. Date Format is incorrect
-2024-09-10T00:32:09.491491,Data Consistency check passed. Date Format is correct
-2024-09-10T00:32:09.492492500,Data Consistency check passed. Date Format is correct
-2024-09-10T00:32:09.492492500,Data Consistency check passed. Date Format is correct
-2024-09-10T00:32:09.492492500,Data Consistency check passed. Date Format is correct
-2024-09-10T00:32:09.493492,Data Consistency check passed. Date Format is correct
-2024-09-10T00:32:09.500491300,Duplicate Found for [2, Bob, 2023-08-02, 200.0]
+2024-09-10T10:49:35.577774,File SampleData.csv has loaded successfully.
+2024-09-10T10:49:35.603774500,Data Completeness check passed. ID column  has no missing value for row 1
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Name column  has no missing value for row 1
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Date column  has no missing value for row 1
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Amount column  has no missing value for row 1
+2024-09-10T10:49:35.609768200,Data Completeness check passed. ID column  has no missing value for row 2
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Name column  has no missing value for row 2
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Date column  has no missing value for row 2
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Amount column  has no missing value for row 2
+2024-09-10T10:49:35.609768200,Data Completeness check passed. ID column  has no missing value for row 3
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Name column  has no missing value for row 3
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Date column  has no missing value for row 3
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Amount column  has no missing value for row 3
+2024-09-10T10:49:35.609768200,Data Completeness check passed. ID column  has no missing value for row 4
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Name column  has no missing value for row 4
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Date column  has no missing value for row 4
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Amount column  has no missing value for row 4
+2024-09-10T10:49:35.609768200,Data Completeness check passed. ID column  has no missing value for row 5
+2024-09-10T10:49:35.609768200,Data Completeness check passed. Name column  has no missing value for row 5
+2024-09-10T10:49:35.610767600,Data Completeness check passed. Date column  has no missing value for row 5
+2024-09-10T10:49:35.610767600,Data Completeness check passed. Amount column  has no missing value for row 5
+2024-09-10T10:49:35.610767600,Data Completeness check passed. ID column  has no missing value for row 6
+2024-09-10T10:49:35.610767600,Data Completeness check failed. Name column  has missing value for row 6
+2024-09-10T10:49:35.610767600,Data Completeness check passed. Date column  has no missing value for row 6
+2024-09-10T10:49:35.610767600,Data Completeness check failed. Amount column  has missing value for row 6
+2024-09-10T10:49:35.629770,Data Consistency check failed. Date Format is incorrect
+2024-09-10T10:49:35.630770200,Data Consistency check passed. Date Format is correct
+2024-09-10T10:49:35.631777700,Data Consistency check passed. Date Format is correct
+2024-09-10T10:49:35.631777700,Data Consistency check passed. Date Format is correct
+2024-09-10T10:49:35.631777700,Data Consistency check passed. Date Format is correct
+2024-09-10T10:49:35.632769100,Data Consistency check passed. Date Format is correct
+2024-09-10T10:49:35.639768900,Duplicate Found for [2, Bob, 2023-08-02, 200.0]

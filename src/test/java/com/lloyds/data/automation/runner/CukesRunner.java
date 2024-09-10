@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features="C:\\Users\\subha\\Downloads\\DataAutomation\\features\\DataQualityCheck.feature",
+    features= "../DataAutomation/features",
         glue = "com.lloyds.data.automation.steps",
         monochrome=true,
         plugin = {"pretty","junit:target/JUnitReports/report.xml",
