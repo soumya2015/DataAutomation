@@ -28,46 +28,8 @@ Follow these steps to set up the project in your preferred IDE and configure Mav
 ## Running Sample Tests
 To run the tests, follow these steps:
 
-Open your terminal (e.g., iTerm for macOS or PowerShell for Windows).
-
-Navigate to the project directory.
-
-Execute the following command to run all the tests:
-
-bash
-Copy code
-mvn clean test
-To run a specific feature file, use the following command:
-
-bash
-Copy code
-mvn test -Dcucumber.options="classpath:features/my_first.feature"
-This will execute the my_first.feature file only.
-
-Reporters
-After executing the tests, the framework allows you to generate various types of reports to analyze test results:
-
+1.Navigate to folder ../src/runner.
+2.Run the tests by rightclicking on CukeRunner file.
 ## Cucumber Report
-To generate a Cucumber report, you can use the following commands after test execution.
-
 If you have configured an HTML Cucumber report in your pom.xml, the report can be opened by navigating to the following location:
-
-## HTML & JUnit Reports: 
-
-The framework automatically generates these reports, accessible in the target directory under cucumber-reports.
-target/cucumber-reports/ directory.
-## Contribution
-We welcome and encourage contributions from the community to improve this project. Follow the steps below to contribute:
-
-Fork the project repository to your own GitHub account.
-Create a new branch for your changes.
-Make the necessary changes, additions, or bug fixes in your branch.
-Commit your changes with clear and concise messages explaining the purpose of each change.
-If introducing new functionality, consider adding tests to ensure robustness.
-Once your changes are ready, submit a pull request (PR) to the original repository.
-In the PR description, provide a detailed explanation of the changes, including relevant context or background information.
-The project maintainers will review your PR and provide feedback if needed.
-Once approved, your changes will be merged into the main project.
-Celebrate your successful contribution! 🎉
-We value your time and effort in improving this project. Contributions are crucial to making it better, and we look forward to working with you!
-
+/target/HtmlReports.
