@@ -26,8 +26,8 @@ public class DataTransformationSteps {
     public void the_dataset_is_loaded_from_for_data_transformation_and_cleaning(String string)throws FileNotFoundException {
         log.info("Loading data file {} ", string);
         dataTransformationService = new DataTransformationService();
-        uncleanDataList = dataTransformationService.loadSampleData(string);
-        log.info("Sample"+uncleanDataList);
+        uncleanDataList = dataTransformationService.loadUncleanData(string);
+        log.info("Unclean"+uncleanDataList);
 
         for (UncleanData uncleanData: uncleanDataList)
         {
@@ -78,7 +78,7 @@ public class DataTransformationSteps {
 
     @Then("save the cleaned dataset to {string}")
     public void save_the_cleaned_dataset_to(String string) throws CsvRequiredFieldEmptyException, CsvDataTypeMismatchException, IOException {
-        dataTransformationService.writeToCSV(uncleanDataList);
+        dataTransformationService.writeToCSV(uncleanDataList,string);
     }
 
 }

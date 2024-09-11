@@ -28,9 +28,10 @@ public class DataTransformationService {
      *         If the file is empty or cannot be read, an empty list may be returned.
      * @throws FileNotFoundException If there is an error reading the file.
      */
-    public List<UncleanData> loadSampleData(String filePath) throws FileNotFoundException {
+    public List<UncleanData> loadUncleanData(String fileName) throws FileNotFoundException {
         //log.info("Loading Sample Data");
-        List<UncleanData> uncleanDataList = new CsvToBeanBuilder(new FileReader(filePath))
+        final String filenameWithPath = "input/".concat(fileName);
+        List<UncleanData> uncleanDataList = new CsvToBeanBuilder(new FileReader(filenameWithPath))
                 .withType(UncleanData.class).build( ).parse( );
         return uncleanDataList;
     }
@@ -131,15 +132,14 @@ public class DataTransformationService {
      * @return A list of string representations of duplicate records. If no duplicates are found,
      *         an empty list is returned.
      */
-    public List<Integer> findDuplicateRecords(List<UncleanData> dataList)
+    public List<String> findDuplicateRecords(List<UncleanData> dataList)
     {
 
         List<String[]> dataArrList = new ArrayList<>();
-        List<Integer> duplicateIdList = new ArrayList<>();
+        List<String> duplicateList = new ArrayList<>();
 
-        for (UncleanData data1: dataList)
-        {
-            String[] valueArr = new String [] {String.valueOf(data1.getId()).trim(),data1.getName().trim(),
+        for (UncleanData data1 : dataList) {
+            String[] valueArr = new String[]{String.valueOf(data1.getId()).trim(), data1.getName().trim(),
                     data1.getTransactionDate().trim(), String.valueOf(data1.getAmount()).trim()};
             dataArrList.add(valueArr);
         }
@@ -159,15 +159,14 @@ public class DataTransformationService {
             // Check if this row already exists in the set
             if (!uniqueRows.add(rowString)) {
                 log.info("Duplicate found: " + rowString);
-                hasDuplicates = true;
-                duplicateIdList.add(Integer.valueOf(rowString.substring( 1, rowString.indexOf(","))));
+                duplicateList.add(rowString);
             }
         }
 
         if (!hasDuplicates) {
             log.info("No duplicates found.");
         }
-        return duplicateIdList;
+        return duplicateList;
     }
     /**
      * Writes a list of {@link UncleanData} objects to a CSV file.
@@ -177,9 +176,10 @@ public class DataTransformationService {
      *                        the method will not write any data.
 
      */
-    public void writeToCSV(List<UncleanData> uncleanDataList)
+    public void writeToCSV(List<UncleanData> uncleanDataList, String fileName)
     {
-        try (CSVWriter writer = new CSVWriter(new FileWriter("Clean_Data.csv"))) {
+        final String filenameWithPath = "output/".concat(fileName);
+        try (CSVWriter writer = new CSVWriter(new FileWriter(filenameWithPath))) {
             // Write header of the "Clean_Data.csv" file.
             String[] header = { "ID", "NAME", "TRANSACTION DATE", "AMOUNT" };
             writer.writeNext(header);
