@@ -14,22 +14,34 @@ Ensure that the Java class path is correctly set.
 Ensure the .m2 class path is properly configured for Maven dependencies.
 
 ### IDE
-IntelliJ IDEA or Eclipse can be used. If using Eclipse, the following plugins are required:
+You can use either IntelliJ IDEA or Eclipse for this setup. The following plugins are required:
 
 Maven
 Cucumber
 Framework Setup
-To set up the framework, you can either:
+To set up the framework, you have two options:
 
-Fork or clone this repository from GitHub, or
-Download the ZIP file and extract it to your local workspace.
-Follow these steps to set up the project in your preferred IDE and configure Maven to download the necessary dependencies.
+1.Fork or clone this repository from GitHub.
 
-## Running Sample Tests
-To run the tests, follow these steps:
+2.Download the ZIP file and extract it to your local workspace.
 
-1.Navigate to folder ../src/runner.
-2.Run the tests by rightclicking on CukeRunner file.
+Follow these steps to set up the project in IntelliJ.
+1.Open Intelij.
+
+2.Go to File->Open
+
+3.Select the File path for the "Data Automation" directory.
+
+4.The Repository will be loaded in Intelij.
+
+## Running Tests
+To execute the tests, follow these steps:
+
+1.Navigate to the CukesRunner file located at ..\src\main\java\com\lloyds\data\automation\runner.
+
+2.Right-click on the CukesRunner file and select "Run" to start the tests.
+
+
 ## Cucumber Report
-If you have configured an HTML Cucumber report in your pom.xml, the report can be opened by navigating to the following location:
-/target/HtmlReports.
+Once the test run completes successfully, the Cucumber report is generated in the ../target/HtmlReports directory. 
+The report.html file can be opened using File Explorer or viewed in any web browser.
