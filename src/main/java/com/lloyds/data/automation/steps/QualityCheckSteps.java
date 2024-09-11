@@ -96,7 +96,7 @@ public class QualityCheckSteps {
 
     @Then("the results are logged in {string}")
     public void the_results_are_logged_in(String string) throws IOException {
-        qualityCheckService.writeToFile(logFileList);
+        qualityCheckService.writeToFile(logFileList, string);
     }
 
     private void logMissingData(int counter, SampleData sampleData) {

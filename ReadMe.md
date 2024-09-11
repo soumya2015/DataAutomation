@@ -1,19 +1,19 @@
-Data Automation - BDD Cucumber Java Framework
-Overview
+# Data Automation - BDD Cucumber Java Framework
+## Overview
 This project demonstrates the process of identifying data quality issues, applying data cleaning and transformation techniques, and simulating a data pipeline to ensure the dataset is ready for analysis. The goal is to improve the dataset's accuracy, consistency, and completeness through various tasks.
 
 Additionally, this repository includes a BDD (Behavior-Driven Development) framework using Cucumber (v3.0.0) with Java. It showcases automation script development, utilizes multiple reporters like Allure, HTML, and JSON, and includes features like capturing screenshots for tests and generating error shots for failed test cases.
 
-Installation & Prerequisites
+## Installation & Prerequisites
 Before you begin, ensure you have the following tools installed and properly configured:
 
-JDK 1.8+
+### JDK 17 
 Ensure that the Java class path is correctly set.
 
-Maven
+### Maven
 Ensure the .m2 class path is properly configured for Maven dependencies.
 
-IDE
+### IDE
 IntelliJ IDEA or Eclipse can be used. If using Eclipse, the following plugins are required:
 
 Maven
@@ -25,7 +25,7 @@ Fork or clone this repository from GitHub, or
 Download the ZIP file and extract it to your local workspace.
 Follow these steps to set up the project in your preferred IDE and configure Maven to download the necessary dependencies.
 
-Running Sample Tests
+## Running Sample Tests
 To run the tests, follow these steps:
 
 Open your terminal (e.g., iTerm for macOS or PowerShell for Windows).
@@ -47,14 +47,16 @@ This will execute the my_first.feature file only.
 Reporters
 After executing the tests, the framework allows you to generate various types of reports to analyze test results:
 
-Cucumber Report
+## Cucumber Report
 To generate a Cucumber report, you can use the following commands after test execution.
 
 If you have configured an HTML Cucumber report in your pom.xml, the report can be opened by navigating to the following location:
 
-HTML & JUnit Reports: The framework automatically generates these reports, accessible in the target directory under cucumber-reports.
+## HTML & JUnit Reports: 
+
+The framework automatically generates these reports, accessible in the target directory under cucumber-reports.
 target/cucumber-reports/ directory.
-Contribution
+## Contribution
 We welcome and encourage contributions from the community to improve this project. Follow the steps below to contribute:
 
 Fork the project repository to your own GitHub account.

@@ -12,9 +12,9 @@ Feature: Data Quality Checks for SampleData.csv
       | id     |
       | name   |
       | date   |
-      | ammount|
+      | amount|
     Then there are no missing values in the file for specified columns
     And Date column follows the format `YYYY-MM-DD`
     And there are no duplicate entries based on a unique identifier column
-    And the results are logged in "data_quality_log.txt"
+    And the results are logged in "output.txt"
 

@@ -18,6 +18,7 @@ import java.text.ParseException;
 import java.util.List;
 
 import static com.lloyds.data.automation.service.DataTransformationService.handleMissingNumeric;
+import static com.lloyds.data.automation.service.DataTransformationService.normalizeText;
 import static com.lloyds.data.automation.service.QualityCheckService.isValidDateFormat;
 
 @Slf4j
@@ -93,6 +94,9 @@ public class DataPipelineSteps {
             String standardiseDate = transformationService.standardiseDateFormat(uncleanData.getTransactionDate());
             log.info("Original: " + uncleanData.getTransactionDate() + " -> Standardized: " + standardiseDate);
             uncleanData.setTransactionDate(standardiseDate);
+            String trimName = normalizeText(uncleanData.getName());
+            log.info("Original format: " + uncleanData.getName() + " -> Trim Name: " + trimName);
+            uncleanData.setName(trimName);
         }
         List<UncleanData> uncleanDataList1 = handleMissingNumeric(uncleanDataList);
         for (UncleanData uncleanData : uncleanDataList1) {

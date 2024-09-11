@@ -87,10 +87,12 @@ public class QualityCheckService {
        return null;
     }
 
-    public void writeToFile(List<LogFile> logFileList) throws IOException
+    public void writeToFile(List<LogFile> logFileList, String fileName) throws IOException
     {
+        final String filenameWithPath = "output/".concat(fileName);
+
         // Write to a text file.
-        BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filenameWithPath));
 
         for(LogFile logFile: logFileList) {
             writer.write(logFile.getCreationDate() + ","+logFile.getLog() + System.lineSeparator());
