@@ -34,7 +34,6 @@ public class DataTransformationSteps {
             log.info("Unclean Data ID:"+uncleanData.getId()
                     +",Name:" +uncleanData.getName()+" + Trans Date: "+uncleanData.getTransactionDate() +" Amount: "+uncleanData.getAmount());
         }
-
         Assert.notNull(uncleanDataList,"Unclean Data file not Available");
     }
 

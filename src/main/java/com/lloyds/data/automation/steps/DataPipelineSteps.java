@@ -46,29 +46,18 @@ public class DataPipelineSteps {
         int counter = 0;
         for (UncleanData uncleanData : uncleanDataList) {
             counter++;
-            if (uncleanData.getId() <= 0) {
-                log.info("Id is missing for row {}", counter);
-            }
-            if (StringUtils.isEmpty(uncleanData.getName())) {
-                log.info("Missing name in row {}", counter);
-            }
-            if (StringUtils.isEmpty(uncleanData.getTransactionDate())) {
-                log.info("Transaction date is missing in row {}", counter);
-            }
-            if ((uncleanData.getAmount() == null)) {
-                log.info("Amount is missing in row {}", counter);
-            }
+
+            // Log missing Data
+            logMissingData(counter, uncleanData);
 
             //Data Consistency: Verify that date columns follow the format `YYYY-MM-DD`.
             boolean dateFormat = true;
             if (isValidDateFormat(uncleanData.getTransactionDate())) {
-                log.info("Date format is correct", counter);
+                log.info("Date format is correct for row {}", counter);
             } else {
                 log.info("Incorrect Date Format");
             }
-
             // Data Uniqueness: Check for duplicate entries based on a unique identifier column.
-
             List<String> duplicateList = transformationService.findDuplicateRecords(uncleanDataList);
 
             if (duplicateList.size() > 0) {
@@ -79,7 +68,21 @@ public class DataPipelineSteps {
                 log.info("Data Uniqueness check passed. No duplicate entry found");
             }
         }
+    }
 
+    private static void logMissingData (int counter, UncleanData uncleanData) {
+        if (uncleanData.getId() <= 0) {
+            log.info("Id is missing for row {}", counter);
+        }
+        if (StringUtils.isEmpty(uncleanData.getName())) {
+            log.info("Missing name in row {}", counter);
+        }
+        if (StringUtils.isEmpty(uncleanData.getTransactionDate())) {
+            log.info("Transaction date is missing in row {}", counter);
+        }
+        if ((uncleanData.getAmount() == null)) {
+            log.info("Amount is missing in row {}", counter);
+        }
     }
 
     @When("the data transformation and cleaning are applied to the loaded dataset")
@@ -90,7 +93,6 @@ public class DataPipelineSteps {
             String standardiseDate = transformationService.standardiseDateFormat(uncleanData.getTransactionDate());
             log.info("Original: " + uncleanData.getTransactionDate() + " -> Standardized: " + standardiseDate);
             uncleanData.setTransactionDate(standardiseDate);
-
         }
         List<UncleanData> uncleanDataList1 = handleMissingNumeric(uncleanDataList);
         for (UncleanData uncleanData : uncleanDataList1) {

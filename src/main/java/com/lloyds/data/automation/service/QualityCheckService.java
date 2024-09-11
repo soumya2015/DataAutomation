@@ -111,7 +111,6 @@ public class QualityCheckService {
      */
     public List<String> findDuplicateRecords(List<SampleData> dataList)
     {
-
         List<String[]> dataArrList = new ArrayList<>();
         List<String> duplicateList = new ArrayList<>();
 
@@ -140,7 +139,6 @@ public class QualityCheckService {
                 duplicateList.add(rowString);
             }
         }
-
         if (!hasDuplicates) {
             log.info("No duplicates found.");
         }
