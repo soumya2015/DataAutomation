@@ -84,7 +84,6 @@ public class QualityCheckSteps {
                         log("Data Consistency check failed. Date Format is incorrect").build();
                 logFileList.add(logFile);
             }
-
         }
     }
 

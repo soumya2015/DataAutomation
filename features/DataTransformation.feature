@@ -5,7 +5,7 @@ Feature: Clean and Transform Dataset from UncleanData.csv
   So that the data is standardized and ready for analysis.
 
   Background:
-    Given the dataset is loaded from "UncleanData.csv" for data transformation and cleaning
+    Given the dataset is loaded from "unclean_data.csv" for data transformation and cleaning
 
   Scenario: Apply Data Transformation and Cleaning to the loaded dataset
 

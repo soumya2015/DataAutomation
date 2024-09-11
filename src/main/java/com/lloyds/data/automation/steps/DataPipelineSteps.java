@@ -24,7 +24,6 @@ import static com.lloyds.data.automation.service.QualityCheckService.isValidDate
 @Slf4j
 @NoArgsConstructor
 public class DataPipelineSteps {
-
     private DataTransformationService transformationService;
     List<UncleanData> uncleanDataList;
 
@@ -71,7 +70,7 @@ public class DataPipelineSteps {
         }
     }
 
-    private static void logMissingData (int counter, UncleanData uncleanData) {
+    private static void logMissingData(int counter, UncleanData uncleanData) {
         if (uncleanData.getId() <= 0) {
             log.info("Id is missing for row {}", counter);
         }
@@ -108,6 +107,6 @@ public class DataPipelineSteps {
 
     @Then("a new file {string} should be created successfully")
     public void a_new_file_should_be_created_successfully(String string) throws CsvRequiredFieldEmptyException, CsvDataTypeMismatchException, IOException {
-        transformationService.writeToCSV(uncleanDataList,string);
+        transformationService.writeToCSV(uncleanDataList, string);
     }
 }
